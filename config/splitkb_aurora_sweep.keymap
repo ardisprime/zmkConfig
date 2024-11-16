@@ -9,10 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 ///// MACROS /////
-#define HMRWL(key1, key2, key3, key4) &kp key1 &kp key2 &kp key3 &kp key4
-#define HMRWR(key1, key2, key3, key4) &kp key1 &kp key2 &kp key3 &kp key4
-//#define HMRWL(key1, key2, key3, key4) &mt LCTRL key1   &mt LGUI key2   &mt LALT key3   &mt LSHFT key4
-//#define HMRWR(key1, key2, key3, key4) &mt LSHFT key1   &mt LALT key2   &mt LGUI key3   &mt LCTRL key4
+//#define HMRWL(key1, key2, key3, key4) &kp key1 &kp key2 &kp key3 &kp key4
+//#define HMRWR(key1, key2, key3, key4) &kp key1 &kp key2 &kp key3 &kp key4
+#define HMRWL(key1, key2, key3, key4) &mt LCTRL key1   &mt LGUI key2   &mt LALT key3   &mt LSHFT key4
+#define HMRWR(key1, key2, key3, key4) &mt LSHFT key1   &mt LALT key2   &mt LGUI key3   &mt LCTRL key4
 
 / {
 
@@ -36,32 +36,32 @@
       >;
     };
 
-    number_layer {
-      bindings = <
-        &kp N1      &kp N2       &kp N3        &kp N4    &kp N5                      &kp N6       &kp N7    &kp N8    &kp N9     &kp N0
-        HMRWL(RBKT, AMPS,        RBRC,         FSLH)     &kp RA(NON_US_BSLH)         HMRWR(COMMA, DOT,      LT,       GT)        &kp DLLR
-        &none       &kp RA(RBKT) &kp RA(MINUS) &kp UNDER &kp EXCL                    &kp BSLH     &kp QMARK &kp RPAR  &kp RCARET &none
-                                               &trans    &none                       &none        &trans
-      >;
-    };
-
-    symbol_layer {
-      bindings = <
-        &none           &none &kp RA(E)       &kp RA(Q) &kp ESC         &kp LEFT    &kp DOWN  &kp UP   &kp RIGHT &none
-        HMRWL(LS(BSLH), AT,   RA(7),          RA(0) )   &kp DEL         HMRWR(STAR, LPAR,     RA(8),   RA(9) )   &none
-        &none           &none &kp NON_US_BSLH &kp PIPE2 &kp TAB         &kp RET     &kp EQUAL &kp PLUS &kp PRCNT &none
-                                              &trans    &none           &none       &trans
-      >;
-    };
-
-    special_layer {
-      bindings = <
-        &none     &none &none &kp C_BRI_DEC &kp C_BRI_INC         &kp C_MuTE &kp C_VOL_DN  &kp C_VOL_UP   &none &none
-        HMRWL(F1, F2,   F3,   F4)           &kp F5                HMRWR(F6,  F7,           F8,            F9)   &kp F10
-        &none     &none &none &none         &kp F11               &kp F12    &none         &none          &none &none
-                              &trans        &none                 &none      &trans
-      >;
-    };
+//    number_layer {
+//      bindings = <
+//        &kp N1      &kp N2       &kp N3        &kp N4    &kp N5                      &kp N6       &kp N7    &kp N8    &kp N9     &kp N0
+//        HMRWL(RBKT, AMPS,        RBRC,         FSLH)     &kp RA(NON_US_BSLH)         HMRWR(COMMA, DOT,      LT,       GT)        &kp DLLR
+//        &none       &kp RA(RBKT) &kp RA(MINUS) &kp UNDER &kp EXCL                    &kp BSLH     &kp QMARK &kp RPAR  &kp RCARET &none
+//                                               &trans    &none                       &none        &trans
+//      >;
+//    };
+//
+//    symbol_layer {
+//      bindings = <
+//        &none           &none &kp RA(E)       &kp RA(Q) &kp ESC         &kp LEFT    &kp DOWN  &kp UP   &kp RIGHT &none
+//        HMRWL(LS(BSLH), AT,   RA(7),          RA(0) )   &kp DEL         HMRWR(STAR, LPAR,     RA(8),   RA(9) )   &none
+//        &none           &none &kp NON_US_BSLH &kp PIPE2 &kp TAB         &kp RET     &kp EQUAL &kp PLUS &kp PRCNT &none
+//                                              &trans    &none           &none       &trans
+//      >;
+//    };
+//
+//    special_layer {
+//      bindings = <
+//        &none     &none &none &kp C_BRI_DEC &kp C_BRI_INC         &kp C_MuTE &kp C_VOL_DN  &kp C_VOL_UP   &none &none
+//        HMRWL(F1, F2,   F3,   F4)           &kp F5                HMRWR(F6,  F7,           F8,            F9)   &kp F10
+//        &none     &none &none &none         &kp F11               &kp F12    &none         &none          &none &none
+//                              &trans        &none                 &none      &trans
+//      >;
+//    };
 
 ///// TEST LAYOUT /////
 
