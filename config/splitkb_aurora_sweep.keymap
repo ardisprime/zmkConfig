@@ -36,7 +36,7 @@
 
     number_layer {
       bindings = <
-        &kp RBKT &kp AMPS     &kp RBRC,     &kp FSLH  &kp RA(NON_US_BSLH)         &kp COMMA &kp DOT   &kp LT   &kp GT    &kp DLLR
+        &kp RBKT &kp AMPS     &kp RBRC      &kp FSLH  &kp RA(NON_US_BSLH)         &kp COMMA &kp DOT   &kp LT   &kp GT    &kp DLLR
         HMRWL(N1 ,N2          ,N3           ,N4)      &kp N5                      HMRWR(N6  ,N7       ,N8      ,N9)      &kp N0
         &none    &kp RA(RBKT) &kp RA(MINUS) &kp UNDER &kp EXCL                    &kp BSLH  &kp QMARK &kp RPAR &kp CARET &none
                                             &trans    &none                       &none     &trans
