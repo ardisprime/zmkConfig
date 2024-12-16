@@ -9,55 +9,45 @@
 #include <dt-bindings/zmk/bt.h>
 
 ///// MACROS /////
-#define HMRWL(key1, key2, key3, key4) &mt LCTRL key1   &mt LGUI key2   &mt LALT key3   &mt LSHFT key4
-#define HMRWR(key1, key2, key3, key4) &mt LSHFT key1   &mt LALT key2   &mt LGUI key3   &mt LCTRL key4
 
 / {
-
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    special {
-      if-layers = <1 2>;
-      then-layer = <3>;
-    };
-  };
 
   keymap {
     compatible = "zmk,keymap";
 
-    letter_layer {
+    default_layer {
       bindings = <
-        &kp Q       &kp W &kp E &kp R     &kp T             &kp Y     &kp U     &kp I     &kp O   &kp P
-        HMRWL(A,    S,    D,    F)        &kp G             HMRWR(H,  J,        K,        L)      &kp LBKT
-        &kp Z       &kp X &kp C &kp V     &kp B             &kp N     &kp M     &kp SEMI  &kp SQT &kp MINUS
-                                &lt 1 TAB &kp SPACE         &kp BSPC  &lt 2 RET
+        &kp Q &kp W &kp E &kp R &kp T                  &kp Y      &kp U &kp I &kp O     &kp P
+        &kp A &kp S &kp D &kp F &kp G                  &kp TAB    &kp H &kp J &kp K     &kp L
+        &kp Z &kp X &kp C &kp V &kp B                  &kp RET    &kp N &kp M &kp COMMA &kp DOT
+                          &to 1 &kp BSPC               &kp SPACE  &to 2
       >;
     };
 
-    number_layer {
+    low_layer {
       bindings = <
-        &kp RBKT &kp AMPS     &kp RBRC      &kp FSLH  &kp RA(NON_US_BSLH)         &kp COMMA &kp DOT   &kp LT   &kp GT    &kp DLLR
-        HMRWL(N1 ,N2          ,N3           ,N4)      &kp N5                      HMRWR(N6  ,N7       ,N8      ,N9)      &kp N0
-        &none    &kp RA(RBKT) &kp RA(MINUS) &kp UNDER &kp EXCL                    &kp BSLH  &kp QMARK &kp RPAR &kp CARET &none
-                                            &trans    &none                       &none     &trans
+        &kp N1 &kp N2 &kp N3 &kp RBKT &kp RA(Q)         &kp CARET &kp STAR  &kp LPAR &kp LT   &kp GT
+        &kp N4 &kp N5 &kp N6 &kp FSLH &kp RA(E)         &kp BSLH  &sk LSHFT &sk LALT &sk LGUI &sk LCTRL
+        &kp N7 &kp N8 &kp N9 &kp N0   &kp DLLR          &kp PRCNT &tk LSHFT &tk LALT &tk LGUI &tk LCTRL
+                             &to 3    &trans            &trans    &to 0
       >;
     };
 
-    symbol_layer {
+    high_layer {
       bindings = <
-        &none           &none &kp RA(E)       &kp RA(Q) &kp ESC         &kp LEFT    &kp DOWN  &kp UP   &kp RIGHT &none
-        HMRWL(LS(BSLH), AT,   RA(N7),         RA(N0) )  &kp DEL         HMRWR(STAR, LPAR,     RA(N8),   RA(N9) )   &none
-        &none           &none &kp NON_US_BSLH &kp PIPE2 &kp PG_DN       &kp PG_UP   &kp EQUAL &kp PLUS &kp PRCNT &none
-                                              &trans    &none           &none       &trans
+        &kp RBRC        &kp RA(NON_US_BSLH) &kp QMARK &kp RPAR      &kp SQT          &kp EXCL   &kp RA(N8)   &kp RA(N9) &kp RA(7) &kp RA(0)
+        &kp NON_US_BSLH &kp PIPE2           &kp AMPS  &kp RA(MINUS) &kp LBKT         &kp MINUS  &kp LEFT     &kp DOWN   &kp UP    &kp RIGHT
+        &none           &kp RA(RBKT)        &kp ESC   &kp DEL       &kp SEMI         &kp UNDER  &kp LS(BSLH) &kp AT     &kp PG_DN &kp PG_UP
+                                                      &to 0         &trans           &trans     &to 3
       >;
     };
 
-    special_layer {
+    switching_layer {
       bindings = <
-        &none     &none &none &kp C_BRI_DEC &kp C_BRI_INC         &kp C_MUTE &kp C_VOL_DN  &kp C_VOL_UP   &none &none
-        HMRWL(F1, F2,   F3,   F4)           &kp F5                HMRWR(F6,  F7,           F8,            F9)   &kp F10
-        &none     &none &none &none         &kp F11               &kp F12    &none         &none          &none &none
-                              &trans        &none                 &none      &trans
+        &kp F1 &kp F2  &kp F3  &kp F4  &none          &none &kp EQUAL &kp PLUS &none &none
+        &kp F5 &kp F6  &kp F7  &kp F8  &none          &none &to 1     &to 0    &to 2 &none
+        &kp F9 &kp F10 &kp F11 &kp F12 &none          &none &none     &none    &none &none 
+                               &none   &trans         &trans     &none
       >;
     };
 
