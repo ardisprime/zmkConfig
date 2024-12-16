@@ -10,6 +10,11 @@
 
 ///// MACROS /////
 
+// increase sticky keys release
+&sk {
+  release-after-ms = <5000>;
+}
+
 / {
 
   keymap {
