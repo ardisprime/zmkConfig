@@ -42,7 +42,7 @@
       bindings = <
         &none      &none      &kp RA(RBKT) &none      &none              &none     &kp EQUAL         &kp PLUS  &kp GRAVE &none 
         &kp RA(N8) &kp RA(N9) &kp RA(N7)   &kp RA(N0) &kp EXCL           &kp UNDER &kp LEFT          &kp DOWN  &kp UP    &kp RIGHT
-        &none      &none      &kp LS(BLSH) &kp AT     &none              &none     &kp NON_US_BSLH   &kp PIPE2 &none     &none
+        &none      &none      &kp LS(BSLH) &kp AT     &none              &none     &kp NON_US_BSLH   &kp PIPE2 &none     &none
                                            &mo 5      &kp SPACE          &kp BSPC  &none
       >;
     };
