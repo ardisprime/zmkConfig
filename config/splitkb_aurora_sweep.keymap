@@ -51,7 +51,7 @@
       bindings = <
         &none     &kp SQT   &kp LBKT  &kp SEMI  &none              &none     &none     &none    &none    &none 
         &kp CARET &kp BSLH  &kp DLLR  &kp RA(Q) &kp RA(E)          &kp PRCNT &sk LSHFT &sk LALT &sk LGUI &sk LCTRL
-        &none     &kp MINUS &kp PG_DN &kp PG_UP &none              &none     &tk LSHFT &tk LALT &tk LGUI &tk LCTRL
+        &none     &kp MINUS &kp PG_DN &kp PG_UP &none              &none     &kt LSHFT &kt LALT &kt LGUI &kt LCTRL
                                       &mo 5     &kp SPACE          &kp BSPC  &none
       >;
     };
